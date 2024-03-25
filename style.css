@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 html{
     height: 100%;
@@ -7,15 +8,18 @@ html{
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
 body{
     display: flex;
     flex-direction: column;
     margin: auto;
-    height: 100%;
+    height: 100vh;
+    width: 100%;
     background-image: linear-gradient(135deg,#c25282,#3c6491);
-    font-family: "Roboto", sans-serif;
+
 }
 
 header{
@@ -70,47 +74,134 @@ nav ul li a:hover{
 form{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     border: 1px solid gray;
     background: rgba(255, 255, 255, 0.211);
     backdrop-filter: blur(10px);
     border-radius: 8px;
-    height: 100%;
-    max-width: 450px;
-    min-width: 300px;
+    height: 80vh;
+    width: 80%;
     flex-wrap: wrap;
+    padding: 0 3rem;
 }
 
-.containerInput{
+.inputGroup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    width: 90%;
+}
+
+.inputBox{
     display: flex;
     flex-direction: column;
+    margin-bottom: 1.3rem;
 }
 
-.inputSexo{
-    flex-direction: row;
+.inputBox input{
+    margin: 0.3rem 0;
+    padding: 0.8rem 0.9rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.211);
+    box-shadow:  8px 7px 10px #0000003b;
 }
 
-.containerSexos{
+.inputBox input:hover{
+    background: rgba(255, 255, 255, 0.401);
+}
+
+.inputBox input:focus{
+    outline: none;
+    background: rgba(255, 255, 255, 0.401);
+}
+
+.inputBox label,
+.genderTitle h6{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.inputBox input::placeholder{
+    color: rgb(86, 86, 86);
+}
+
+.genderGroup{
     display: flex;
-    padding: 0 5px
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    width: 42vh;
 }
 
-#tituloLabel{
-    padding: 0 5px
-}
-
-#tituloSexo{
-    display: block;
-}
-
-input{
+.genderInputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
 }
 
-.inputs{
-    border-radius: 8px;
+.genderInput{
+    display: flex;
+    align-items: center;
+}
+
+.genderInput input{
+    margin-right: 0.25rem;
+}
+
+.continueButton{
+    width: 80%;
+}
+
+.continueButton button{
+    width: 100%;
+    margin-top: 2.5rem;
     border: none;
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.385);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow:  8px 7px 10px #0000003b;
+}
+
+.continueButton button:hover{
+    background-color: #5d0b7d;
+    >a{
+        color: white;
+    }
+}
+
+.continueButton button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #5d0b7d;
+}
+
+@media screen and (max-width: 800px){
+    form{
+        width: 90%;
+        height: auto;
+    }
+
+    #titleForm{
+        padding-bottom: 1rem;
+    }
+
+    .inputGroup{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 15rem;
+        padding-bottom: 0;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        scrollbar-color: rgba(0, 0, 0, 0.345) transparent;
+    }
+
+    .genderInputs{
+        padding-top: 1.5rem;
+    }
+
 }

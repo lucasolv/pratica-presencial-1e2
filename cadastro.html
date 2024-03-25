@@ -18,42 +18,55 @@
     </header>
     <main>
         <form>
-            <div class="containerInput">
-                <label for="">Nome Completo</label>
-                <input class="inputs" type="text" placeholder="Digite seu nome">
+            <h1 id="titleForm">Cadastre-se</h1>
+            <div class="inputGroup">
+                <div class="inputBox">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="inputBox">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                </div>
+                <div class="inputBox">
+                    <label for="celular">Celular</label>
+                    <input type="tel" id="celular" name="celular" placeholder="Digite seu celular" required>
+                </div>
+                <div class="inputBox">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Escolha um username" required>
+                </div>
+                <div class="inputBox">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Crie uma senha" required>
+                </div>
+                <div class="inputBox">
+                    <label for="confirmPassword">Confirme sua senha</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirme sua senha" required>
+                </div>
             </div>
-            <div class="containerInput">
-                <label for="">Data de nascimento</label>
-                <input class="inputs" type="date" placeholder="Digite sua idade">
-            </div>
-            <div class="containerInput inputSexo" id="tituloSexo">
-                <label id="tituloLabel">Sexo</label>
-                <div class="containerInput inputSexo" >
-                    <div id="containerMasculino" class="containerSexos">
-                        <input type="radio" id="masculino" name="sexo" value="masculino">
-                        <label for="masculino">Masculino</label>
+            <div class="genderInputs">
+                <div class="genderTitle">
+                    <h6>Gênero</h6>
+                </div>
+                <div class="genderGroup">
+                    <div class="genderInput">
+                        <input type="radio" name="male" id="male">
+                        <label for="male">Masculino</label>
                     </div>
-                    <div id="containerFeminino" class="containerSexos">
-                        <input type="radio" id="feminino" name="sexo" value="feminino">
-                        <label for="feminino">Feminino</label>
+                    <div class="genderInput">
+                        <input type="radio" name="female" id="female">
+                        <label for="female">Feminino</label>
                     </div>
-                    <div id="containerOutro" class="containerSexos">
-                        <input type="radio" id="outro" name="sexo" value="outro">
-                        <label for="outro">Outro</label>
+                    <div class="genderInput">
+                        <input type="radio" name="others" id="others">
+                        <label for="others">Outro</label>
                     </div>
-                </div>      
+                </div>
+                </div>
             </div>
-            <div class="containerInput">
-                <label for="">Telefone</label>
-                <input class="inputs" type="tel" placeholder="Digite seu número de telefone">
-            </div>
-            <div class="containerInput">
-                <label for="">Email</label>
-                <input class="inputs" type="email" placeholder="Digite seu email">
-            </div>
-            <div class="containerInput">
-                <label for="">Endereço</label>
-                <input class="inputs" type="text" placeholder="Digite seu endereço">
+            <div class="continueButton">
+                <button><a href="./usuarios.html">Continuar</a></button>
             </div>
         </form>
     </main>
