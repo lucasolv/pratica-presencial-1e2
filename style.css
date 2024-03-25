@@ -33,10 +33,10 @@ header{
 }
 
 main{
- flex: 8.5;
- padding: 15px 50px;
- display: flex;
- justify-content: center;
+    flex: 8.5;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: center;
 }
 
 footer{
@@ -81,7 +81,7 @@ form{
     backdrop-filter: blur(10px);
     border-radius: 8px;
     height: 80vh;
-    width: 80%;
+    max-width: 70%;
     flex-wrap: wrap;
     padding: 0 3rem;
 }
@@ -151,6 +151,12 @@ form{
     margin-right: 0.25rem;
 }
 
+#male,
+#female,
+#others {
+    accent-color: #910cc6;
+}
+
 .continueButton{
     width: 80%;
 }
@@ -179,9 +185,9 @@ form{
     color: #5d0b7d;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 897px){
     form{
-        width: 90%;
+        width: 70%;
         height: auto;
     }
 
